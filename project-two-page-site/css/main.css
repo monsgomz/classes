@@ -1,0 +1,709 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    line-height: 1.5;
+    font-family:Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a{
+  text-decoration-skip-ink: auto;
+  color: #36BF7F;
+}
+
+a:hover,
+a:focus {
+    color: #D96666;
+}
+
+/* Make images easier to work with */
+img,
+picture 
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+    fill: currentColor;
+}
+
+svg:not(:root){
+    overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container{
+    width: min(65em, 100%);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* --------                      Project                            -------*/
+:root {
+    --justify-content: flex-start;
+    --height: 50vh;
+    --align: center;
+    --text: initial;
+    --color-background-dark: #5E7B83;
+    --color-background-normal:#D8D4C9 ;
+    --color-background-light:#C2CCCD;
+    --color-details: #a47743;
+    --color-almost-white:#F7F7F7;
+
+}
+
+html{
+    font-family: 'Abhaya Libre', serif;
+    background-color:#D8D4C9 ;
+}
+
+a{
+    text-decoration: none;
+}
+
+section p a[data-descrip]{
+    position: relative;
+}
+
+section p a:hover::after,
+section p a:focus::after{
+    content: attr(data-descrip);
+    position: absolute;
+  left: 0;
+  /* ---------- prof comment ----------
+    
+    You should not be using `px`!
+
+    ---------- end prof comment ---------- */
+  top: -40px;
+  min-width: 100px; 
+  border-radius: 10px;
+  background-color: var(--color-almost-white);
+  padding: .5rem;
+  color: var(--color-details);
+  font-size: .75em;
+  z-index: 1;
+  text-align: center;
+  font-style: italic;
+}
+
+.navbar{
+    background-color: var(--color-background-dark);
+    border-top:  .5rem solid var(--color-details);
+}
+
+.navbar .container{
+    padding-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+ .navbar a {
+    color: var(--color-almost-white);
+    padding: .5rem 0rem;
+    text-align: center;
+    
+}
+
+.navbar nav{
+    margin: 0rem;
+    padding: 0rem;
+   width: 100%;
+   
+}
+
+.navbar nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar nav a{
+    display: block;
+  font-size: 1.125rem;
+ 
+}
+
+ .navbar ul li a:hover,
+.navbar ul li a:focus-visible{
+background-color: var(--color-details);
+} 
+
+.navbar .logo{
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+   
+}
+
+.navbar .logo__img{
+    width: 10rem;
+}
+
+.navbar .logo__text{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: .55em 1.5em .5em;
+    background-color: var(--color-background-dark);
+    border: 0.125rem solid var(--color-background-dark);
+    color: var(--color-almost-white);
+    border-radius: .25em;
+    text-decoration: none;
+    cursor: pointer;
+    font-family:inherit;
+    font-size: inherit;
+
+}
+
+.btn--secondary{
+    background-color: var(--color-details);
+    border-color: var(--color-details);
+    color: black;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible{
+    background-color: var(--color-background-light);
+    border-color: var(--color-background-light);
+    color: black;
+}
+.btn--large {
+    font-size: 1.150rem;
+}
+
+.btn--about:hover,
+.btn--about:focus-visible{
+    background-color: var(--color-background-light);
+    border-color: var(--color-background-light);
+    color: black;
+}
+
+.banner{
+    background-image: linear-gradient(to bottom, #0009, #0009), url('../images/boat1.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5rem;
+}
+
+#banner-blog{
+    background-image: linear-gradient(to bottom, #0009, #0009), url('../images/sea.jpg');
+}
+
+.banner .container{
+    min-height: var(--height); 
+    display: flex;
+    justify-content:var(--justify-content);
+    align-items: var(--align);
+    padding-top: 3rem;
+    padding-bottom: 5rem; 
+}
+
+.banner__content{
+    width: min(35em, 100%);
+    text-align: var(--text);
+}
+
+.banner--large{
+    --height: 60vh;
+}
+
+.banner--bottom{
+    --align: flex-end;
+}
+
+.banner--center{
+    --justify-content: center;
+    --text:center;
+}
+
+.banner--right{
+    --justify-content: flex-end;
+    --text:right;
+}
+
+.banner__title{
+    font-weight: bold;
+    line-height: 1.3;
+    color: var(--color-details);
+}
+
+.banner__text{
+    font-size: 1.150rem;
+    color: var(--color-almost-white);
+}
+
+#banner__link{
+    color: var(--color-details);
+    text-decoration: underline;
+
+}
+
+#banner__link:hover, 
+#banner__link:hover{
+    color: var(--color-background-light);
+}
+
+.card--group{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+#card--group1{
+    text-align: center;
+}
+
+.card{
+    grid-column: span 12;
+    display: flex;
+    background-color: var(--color-almost-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 .25rem .75rem #0002;
+    flex-direction: column;
+}
+
+.card__content {
+
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.card-group__title{
+    padding-top:2rem;
+    padding-left: .5rem;
+    font-size:x-large;
+    font-weight:bolder ;
+    text-transform: uppercase;
+}
+
+.cards a img {
+  aspect-ratio: 16 / 9;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+ .image__icon{
+    background-color: var(--color-background-dark);
+    object-fit: cover;
+    width: 100%;
+   
+} 
+
+  .card__content p{
+    color: black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    line-height: 1.3;
+  }
+
+   .card__btn{
+    display: inline-block;
+    color: var(--color-almost-white);
+    background-color: var(--color-details);
+    padding: .75rem 2rem;
+    /* ---------- prof comment ----------
+    
+    You should not be using `px`!
+
+    ---------- end prof comment ---------- */
+    border-radius: 5px;
+    margin: 1rem 1.5rem;
+    text-align: center;
+    align-self: flex-start;
+    box-shadow: 0 .25rem .5rem #0002;
+}
+
+.card__title{
+    padding: 1rem ;
+    margin: 0;
+    color: var(--color-details);
+    
+}
+
+.div__card {
+    background-color: var(--color-background-light);
+    padding: 5rem;
+    margin: 0;
+}
+
+.image--content .container{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .image--content__image{
+    aspect-ratio: 1 / 1;
+    display: flex;
+  }
+
+  .image--content__image img{
+    object-fit: cover;
+  }
+
+  .image--content__title{
+    font-size: 1.756rem;
+    line-height: 1.3;
+  }
+
+  .footer{
+    background-color: var(--color-background-dark);
+    color: var(--color-almost-white);
+    border-bottom:  .5rem solid var(--color-details);
+    list-style: none;
+}
+
+.footer .container{
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer a {
+    color: var(--color-almost-white);
+}
+
+footer a:hover,
+.footer :focus-visible{
+color: var(--color-details);
+}
+
+.footer .logo{
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+}
+
+.footer .logo__img{
+    width: 10rem;
+}
+
+.footer .logo__text{
+    font-size: 1.525rem;
+    font-weight: bold;
+}
+
+.footer nav ul{
+    list-style: none;
+    margin: 0;
+    border-left: .125rem solid var(--color-details);
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.footer div ul{
+    list-style: none;
+    padding-left:1rem;
+}
+
+.container--article{
+
+    display:block;
+}
+.container--article a{
+    color: var(--color-details);
+}
+.container--article a:hover{
+    color: var(--color-details);
+}
+.callout, .article__footer{
+    background-color: var(--color-background-light);
+    /* ---------- prof comment ----------
+    
+    You should not be using `px`!
+
+    ---------- end prof comment ---------- */
+    border-left: 3px solid var(--color-background-dark);
+    margin-bottom: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.callout h2{
+    font-weight: bold;
+    color: var(--color-details);
+}
+
+.column-sticky{
+    position: sticky;
+    padding-top: .75rem;
+    top: 5rem;
+    /* width: 450px; */
+    background-color: var(--color-details);
+    border-radius: 1rem;
+    align-self: flex-start;
+    /* ---------- prof comment ----------
+    
+    You should not be using `px`!
+
+    ---------- end prof comment ---------- */
+    border-bottom: var(--color-background-dark) solid 5px;
+    border-right: var(--color-background-dark) solid 7px;
+    margin-bottom: 1rem;
+}
+
+.container .column-sticky {
+    padding: 1rem;
+}
+
+.column-sticky a{
+    color: var(--color-background-light);
+    font-size: 1.2em;
+}
+
+.column-sticky a:hover,
+.column-sticky a:focus{
+    color: var(--color-almost-white);
+}
+.column-sticky h2{
+    font-size: 1.75em;
+    margin-bottom: 0.5rem;
+    color: var(--color-almost-white);
+    font-weight: bold;
+}
+
+.card:hover{
+    animation: jump 2s ease-out ;
+    -webkit-animation: jump 2s ease-out ;
+}
+
+article img {
+    padding-bottom: 1rem;
+}
+
+article h2, article h3{
+    margin-bottom: .5rem;
+}
+
+.div--tags{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: baseline;
+    align-self: flex-start;
+   border-bottom: var(--color-background-dark) .2rem solid;
+    
+}
+.div--tags a{
+    color: var(--color-details);
+    background-color: var(--color-background-light);
+    padding: .5rem;
+    border-radius: .75rem;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+.div--tags a:hover{
+    color: var(--color-almost-white);
+}
+
+
+
+    @keyframes jump {
+        0% {
+          transform: translateY(0);
+        }
+      
+        50% {
+          transform: translateY(4rem);
+        
+}
+      
+        100% {
+          transform: translateY(0);
+        }
+      
+  }
+
+
+/* MEDIA SCREEN */
+@media only screen and (min-width:45em) {
+    
+    .banner__title{
+        font-size: 2.069rem;
+    }
+
+    .banner__text,
+    .btn--large{
+        font-size: 1.200rem;
+    }
+
+    .footer .container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer .logo{
+        flex: 2 0;
+    }
+
+    .footer nav,
+    .footer small{
+        flex: 1 0;
+    }
+
+    .image--content .container{
+        grid-template-columns: 1fr 2fr;
+    }
+    .image--content__title{
+        font-size: 2.069rem;
+      }
+
+      .m-1-2 {
+        grid-column: span 6;
+      }
+
+
+}
+
+@media only screen and (min-width: 50em) {
+
+    
+    .navbar .container{
+        flex-direction: row;
+       padding-left: 1rem;
+       padding-right: 1rem;
+    }
+    .navbar nav{
+        padding-left: 1.5rem;
+    }
+    .navbar nav ul{
+         display: flex; 
+        justify-content:flex-end;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar .logo__text{
+        font-size: 1.602rem;
+    }
+
+    .navbar nav a {
+        padding: 2rem 1rem;
+    }
+    .container--article{
+        display: grid;
+    grid-template-columns: 3fr 1fr;
+    }
+    section p a:hover::after,
+    section p a:focus::after{
+        /* ---------- prof comment ----------
+    
+        You should not be using `px`!
+
+        ---------- end prof comment ---------- */
+        min-width: 200px; 
+    }
+
+
+  } 
+
+@media only screen and (min-width:60em) {
+    
+    .banner__title{
+        font-size: 2.444rem;
+    }
+
+    .banner__text,
+    .btn--large{
+        font-size: 1.250rem;
+    }
+
+    .l-1-3 {
+        grid-column: span 4;
+      }
+
+      .image--content .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .image--content__title{
+        font-size: 2.444rem;
+      }
+     
+
+}

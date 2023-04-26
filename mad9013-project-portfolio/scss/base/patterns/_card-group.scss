@@ -1,0 +1,41 @@
+.image-card{
+    width: 30%;
+    opacity: 0.25;
+    padding-bottom: 2rem;
+}
+
+.cards{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1rem;
+    color: var(--bs-secondary);
+    
+}
+.cards:hover{
+    border-radius: 50%;
+  
+    img{
+        opacity: 1;
+    }
+    transition: all 1s;
+  
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+  }
+
+
+.card a:hover{
+    color: #fff;
+  }
+  
+  .card:hover{
+    background-color: var(--bs-secondary);
+    color: #fff;
+    transition: all .75s ease-in;
+    box-shadow: .75rem .75rem .05rem .05rem var(--bs-primary);
+  }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="contact-form">
+        <div class="container">
+            <div class="contact-form__wrap">
+                <from action="#" class="contact-form__form">
+                    <div class="form-unit full">
+                        <h1 class="contact-form__title">Contact Us</h1>
+                    </div>
+
+                    <div class="form-unit">
+                        <label for="fName">Full Name*</label>
+                        <input type="text" id="fName" name="fName" required>
+                    </div>
+                    <div class="full-divided">
+                    <div class="form-unit">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-unit">
+                        <label for="tel">Phone*</label>
+                        <input type="tel" id="tel" name="tel" required>
+                    </div>
+
+                    </div>
+                    <div class="form-unit divided">
+                    
+                    <fieldset>
+                        <legend>Preferred Contact Method:</legend>
+                        <input type="radio" name="contact-method" id="email-method"/>
+                        <label for="email-method">Email</label>
+                        <input type="radio" name="contact-method" id="phone-method" />
+                        <label for="phone-method">Phone</label>
+                    </fieldset>
+                    </div>
+                    <div class="form-unit">
+                        <label for="subject">Subject*</label>
+                        <select id="subject" name="subject" required>
+                            <option value="clear"> </option>
+                            <option value="sales">Sales</option>
+                              <option value="pricing">Pricing</option>
+                              <option value="support">Support</option>
+                              <option value="careers">Careers</option>
+                        </select>
+                    </div>
+                    <div class="form-unit">
+                        <label for="message">Message*</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="permission" name="permission" required/>
+                        <label for="permission">I consent to the <a href="#">Terms and Services</a>.</label>
+                    </div>
+                    
+                    <div class="form-unit full">
+                        <input class="btn" type="Submit" value="Submit">
+                    </div>
+
+                </from>
+
+
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

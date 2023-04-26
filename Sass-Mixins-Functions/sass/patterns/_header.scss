@@ -1,0 +1,204 @@
+
+/* ---------- Header ---------- */
+
+.masthead {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-top: .25rem solid var(--color-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }
+  
+  .masthead .container {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  .masthead a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .masthead a:hover,
+  .masthead a:focus-visible {
+    color: var(--color-secondary);
+  }
+  
+  .masthead .logo {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    font-size: 1.525rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0;
+  }
+  
+  .masthead .logo__img {
+    width: 4rem;
+  }
+  
+  .masthead .logo__text {
+    font-size: 1.525rem;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  
+  .masthead nav {
+    position: fixed;
+    top: 0;
+    right: -66.6666%;
+    width: 66.6666vw;
+    height: 100vh;
+    box-shadow: -2px 3px 5px rgba(0, 0, 0, .15);
+    background-color: var(--color-primary);
+    border-top: .25rem solid var(--color-accent);
+    transition: 
+  right .2s;
+  }
+  
+  .masthead nav.open {
+    right: 0;
+  }
+  
+  .masthead ul {
+    padding: 6rem 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .masthead ul a {
+    display: block;
+    padding: .75rem 1.5rem;
+    text-align: right;
+    font-size: 1.5rem;
+  }
+  
+  .masthead ul a:hover,
+  .masthead ul a:focus-visible {
+    color: #fff;
+    background-color: var(--color-secondary);
+  }
+  
+  .masthead .sub-masthead {
+    background-color: #222d36;
+    color: #fff;
+  }
+  
+  @media only screen and (min-width: 45em) {
+  
+    .masthead .container {
+      padding: 0 1.5rem;
+    }
+  
+    .masthead .site-title > * {
+      font-size: 1.725rem;
+    }
+  
+    .masthead nav {
+      position: static;
+      top: auto;
+      left: auto;
+      width: auto;
+      height: auto;
+      box-shadow: none;
+      z-index: auto;
+      background-color: transparent;
+      border: 0;
+    }
+  
+    .masthead ul {
+      flex-direction: row;
+      padding: 0;
+    }
+  
+    .masthead ul a {
+      padding: 1.5rem;
+      font-size: 1rem;
+    }
+  
+  }
+  
+  @media only screen and (min-width: 60em) {
+  
+    .masthead .site-title > * {
+      font-size: 1.956rem;
+    }
+  
+  }
+  
+  /* ---------- Nav Toggle ---------- */
+  
+  .nav-toggle {
+    width: 2.5rem;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .nav-toggle .tog {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    position: relative;
+    transition: 
+  top .2s,
+  bottom .2s,
+  opacity .2s,
+  transform .2s;
+  }
+  .tog.top {
+    top: 0;
+  }
+  
+  .tog.bottom {
+    bottom: 0;
+  }
+  
+  .open .top {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  .open .middle {
+    opacity: 0;
+  }
+  
+  .open .bottom {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+  
+  @media only screen and (min-width: 45em) {
+  
+    .nav-toggle {
+      display: none;
+    }
+  
+  }
+  
+  .click-to-close {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0008;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: 
+  opacity .2s;
+  }
+  
+  .click-to-close.open {
+    opacity: 1;
+    pointer-events: all;
+  }

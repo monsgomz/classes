@@ -1,0 +1,54 @@
+
+.banner {
+    background-image: linear-gradient(to bottom, #0009, #0009), url("../images/banner.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .banner .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 75vh;
+    padding: 3rem 1.5rem;
+  }
+  
+  .banner__content {
+    width: min(35em, 100%);
+  }
+  
+  .banner__title {
+    font-size: 1.756rem;
+    line-height: 1.3;
+    color: var(--color-secondary);
+  }
+  
+  .banner__text {
+    font-size: 1.150rem;
+    color: #fff;
+  }
+  
+  @media only screen and (min-width: 45em) {
+  
+    .banner__title {
+      font-size: 2.069rem;
+    }
+  
+    .banner__text {
+      font-size: 1.200rem;
+    }
+  
+  }
+  
+  @media only screen and (min-width: 60em) {
+  
+    .banner__title {
+      font-size: 2.444rem;
+    }
+  
+    .banner__text {
+      font-size: 1.250rem;
+    }
+  
+  }
+  

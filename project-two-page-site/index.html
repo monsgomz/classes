@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <title>Adventure Web Site</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <a href="./" class="logo">
+                <img class="logo__img" src="./images/logo-ac.svg" alt="Adventure Co. logo">
+                <!-- prof comment
+                  h1 cannot be empty! Either wrap it around the image, or move the h1 to the banner
+                -->
+                <h1 class="logo__text"></h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">About</a></li>
+                    <li><a href="./blog-post.html">Blog</a></li>
+                    <li><a href="">Download</a></li>
+                    <li><a href="">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner__content">
+                <h2 class="banner__title">Welcome to Adventure Co!</h2>
+                <p class="banner__text">An app built for adventurers seeking fame, fortune, and a well organized gameplay experience!
+                    </p>
+                    <a href="#" class="btn btn--secondary btn--large">Download the app!</a>
+            </div>
+        </div>
+    </section>
+    <main>
+        <!-- prof comment
+          banner should be inside of the <main>
+        -->
+        <!-- Cards -->
+        <section class="container">
+            <ul class="card--group" >
+                <li class="card s-1 m-1-2 l-1-3" id="card--group1">
+                    <a href="#" class="card__content">
+                        <img class="image__icon"
+                      src="./images/card-character.svg"
+                      alt="Character!"
+                    />
+                        <h2 class="card__title">Create a character!</h2>
+                        <p>Get started with your very first character.</p>
+                        <!-- <span class="card__btn">Learn More</span> -->
+                    </a>
+                </li>
+                <li class="card s-1 m-1-2 l-1-3" id="card--group1">
+                    <a href="#" class="card__content">
+                        <img class="image__icon"
+                      src="./images/card-party.svg"
+                      alt="Party!"
+                        />
+                        <h2 class="card__title">Form a Party!</h2>
+                        <p>Connect with friends and team up.</p>
+                        <!-- <span class="card__btn">Learn More</span> -->
+                    </a>
+                </li>
+                <li class="card s-1 m-1-2 l-1-3" id="card--group1">
+                    <a href="#" class="card__content">
+                        <img class="image__icon"
+                      src="./images/card-items.svg"
+                      alt="Item!"
+                    />
+                        <h2 class="card__title">Find an item!</h2>
+                        <p>Add fantastic items too boost your character</p>
+                        <!-- <span class="card__btn">Learn More</span> -->
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- About -->
+        <section class="image--content">
+
+            <div class="container">
+    
+                <div class="image--content__image">
+                    <img src="./images/about.jpg" alt="A horse in the mountain">
+                </div>
+    
+                    <div class="image--content__content">
+                        <!-- prof comment
+                          should be h2
+                        -->
+                        <h3 class="image--content__title">About Adventure Co.</h3>
+                        <p class="image--content__text">Adventure Co. is a cooperative storytelling companion for D&D that uses your 
+                            imagination and invites you to adventure, battle, discover, and complete epic quests with your 
+                            friends through an immersive RPG experience. Your first adventure is only a dice roll away!</p>
+                        <a href="#" class="btn btn--about">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <!-- Cards -->
+        <div class="div__card">
+        <section class="container"> 
+            <h2 class="card__title">Recent blog post</h2>
+            <ul class="card--group">
+                <li class="card s-1 m-1-2 l-1-3" id="card--blog1">
+                    <a href="./blog-post.html" class="card__content">
+                        
+                        <h3 class="card__title">One-Shot Adventures: What They Are, Why We Love Them, and Recommendations</h3>
+                        <p>By Mike Bernier</p>
+                        <!-- <span class="card__btn">Learn More</span> -->
+                    </a>
+                </li>
+                <li class="card s-1 m-1-2 l-1-3" id="card--blog2">
+                    <a href="#" class="card__content">
+                        
+                        <h3 class="card__title">5 Tips for Running the Death House One-Shot From Curse of Strahd</h3>
+                        <!-- <p>Connect with friends and team up.</p> -->
+                        <p>by Jeremy Blum</p>
+                        <!-- <span class="card__btn">Learn More</span> -->
+                    </a>
+                </li>
+                <li class="card s-1 m-1-2 l-1-3" id="card--blog3">
+                    <a href="#" class="card__content">
+                        <h3 class="card__title">How to Mashup D&D Sourcebooks for Versatile Storytelling</h3>
+                        <!-- <p>Add fantastic items too boost your character</p> -->
+                        <p>by Riley Silverman</p>
+                        <!-- <span class="card__btn">Learn More</span> -->
+                    </a>
+                </li>
+            </ul>
+        
+        </section>
+    </div>
+
+    </main>
+    <!--  Footer  -->
+    <footer class="footer">
+        <div class="container">
+            <a href="/" class="logo">
+                <img class="logo__img" src="./images/logo-ac.svg" alt="Adventure logo">
+                <!-- <span class="logo__text">Adventure Co.</span> -->
+    
+            </a>
+    
+            <nav>
+                <ul>
+                    <li>
+                    <a href="./index.html">About</a>
+                    </li>
+                    <li>
+                    <a href="./blog-post.html">Blog</a>
+                    </li>
+                    <li>
+                    <a href="#">Download</a>
+                    </li>
+                    <li>
+                        <a href="#">Sign Up</a>
+                        </li>
+            </ul>
+            </nav>
+
+            <ul>
+                <li>
+                <!-- prof comment
+                    p should be <small> as this is legal info
+                -->
+                <p> &copy;2022 Adventure Co-Operative</p>
+                </li>
+                <li>
+                <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                <a href="#">Terms of Service</a>
+                </li>
+                
+        </ul>
+
+
+        </div>
+    </footer>
+    
+</body>
+</html>
