@@ -1,0 +1,417 @@
+:root {
+    --bc-footer: #0f23474a;
+    --primary-color:#000000;
+    --secondary-color: #ffff;
+    --noah_cyrus_every_beginning_ends-one: #3E5380;
+    --noah_cyrus_every_beginning_ends-two: #A9C597;
+    --harry_styles_satellite-one: #BCA075;
+    --harry_styles_satellite-two: #DFD3BF;
+    --miley_cyrus_flowers-one: #0A2948;
+    --miley_cyrus_flowers-two: #91AECF;
+    --dua_lipa_hallucinate-one: #060604;
+    --dua_lipa_hallucinate-two: #C585AB;
+    --drake_toosie_slide-one: #111406;
+    --drake_toosie_slide-two: #888753;
+    --lana_del_rey_doin_time-one: #A8BCC8;
+    --lana_del_rey_doin_time-two: #E9DFCD;
+    --the_weeknd_after_hours-one: #261F12;
+    --the_weeknd_after_hours-two: #8c9062;
+    --controls-color-b:hsla(360, 100%, 100%, 0.09);
+    --controls-color-hover:hsla(360, 100%, 100%, 0.3);
+    --shuffle-color-b:hsla(218, 65%, 17%, 0.26);
+    --list-color-b:hsla(360, 100%, 100%, 1);
+    --shadow-color:rgb(225 225 225 / 0.5);
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],li {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    line-height: 1.5;
+    font-family: 'Nunito',
+        sans-serif, Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture svg {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
+
+svg {
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.container {
+    width: min(45em, 100%);
+    margin: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+body{
+    background: linear-gradient(to bottom, var(--noah-color-one), var(--noah-color-two));
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 6rem;
+}
+
+h1 {
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    background-color: var(--bc-footer);
+    color: var(--secondary-color);
+    position: fixed;
+    top: 0rem;
+    width: 100%;
+}
+
+li {
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+p{
+    padding: .25rem;
+}
+
+li:hover {
+    background-color: var(--list-color-b);
+    transition: ease-in-out .50s;
+    -webkit-transition: ease-in-out .50s;
+    -moz-transition: ease-in-out .50s;
+    -ms-transition: ease-in-out .50s;
+    -o-transition: ease-in-out .50s;
+}
+
+button {
+    background-color: var(--bc-footer);
+    color: var(--secondary-color);
+    padding: .25rem;
+    border: 0;
+    cursor: pointer;
+}
+
+footer>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--bc-footer);
+    color: var(--secondary-color);
+}
+
+footer {
+    position: fixed;
+    bottom: 0rem;
+    width: 100%;
+}
+
+.track__item {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--shadow-color);
+    padding: .025rem;
+    font-weight: lighter;
+    margin-bottom: 1.25rem;
+}
+
+.playlist{
+    width: min(20rem);
+    margin: 0;
+}
+.track__title{
+   font-weight: bold;
+   font-size: larger;
+}
+.track__details{
+    padding-top: .5rem;
+    width: 15rem;
+}
+.track__time p{
+    padding-right: 0;
+}
+
+.track__thumb img{
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem var(--bc-footer);
+}
+
+.album_art__full img{
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    animation: float 6s ease-in-out infinite;
+    animation-play-state: paused;
+    transition: 0.8s ease-in-out;
+    scale:90%;
+    -webkit-transition: 0.8s ease-in-out;
+    -moz-transition: 0.8s ease-in-out;
+    -ms-transition: 0.8s ease-in-out;
+    -o-transition: 0.8s ease-in-out;
+}
+
+.album__selected{
+    background-color: var(--secondary-color);
+    box-shadow: 0.3rem 0.3rem .6rem var(--primary-color);
+}
+
+@keyframes float {
+    0% {
+        /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+        transform: translatey(0px);
+    }
+
+    50% {
+        /* box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2); */
+        transform: translatey(-20px);
+    }
+
+    100% {
+        /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+        transform: translatey(0px);
+        
+    }
+}
+
+.songs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+    width: 100%;
+}
+.progress{
+        background-color: var(--secondary-color);
+        height: 0.5rem;
+        border: solid .1rem var(--bc-footer);
+        border-radius:1rem ;
+        -webkit-border-radius:1rem ;
+        -moz-border-radius:1rem ;
+        -ms-border-radius:1rem ;
+        -o-border-radius:1rem ;
+}
+.played{
+    background-color: lightsalmon;
+    height: 0.4rem;
+}
+
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+#btnShuffle{
+    background-color: transparent;
+    box-shadow: 0.25rem 0.25rem 0.25rem var(--bc-footer);
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    padding: .25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+    margin-left: 2rem;
+}
+#btnShuffle:hover{
+   background-color: var(--shuffle-color-b);
+}
+
+.controls button{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: var(--controls-color-b);
+    border-radius: 5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0;
+}
+
+.controls button:hover{
+    background-color: var(--controls-color-hover);
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+}
+
+.progress{
+    position: fixed;
+    bottom: 3.5rem;
+    width: 100%;
+}
+
+.li-selected{
+    background-color: var(--secondary-color);
+        box-shadow: 0.75rem 0rem 3rem 0rem black;
+}
+
+
+@media only screen and (min-width: 30em) {
+    h1{
+        padding: 0.25rem;
+    }
+    .container{
+        margin: 0 .50rem 2rem .20rem;
+    }
+    main{
+        flex-direction: column;
+    }
+    .playlist {
+        width: auto;
+        margin-right: 2rem;
+        padding-bottom: 5rem;
+    }
+
+    .songs {
+        gap: 6rem;
+    }
+    footer >div{
+        padding: .50rem;
+    }
+    .album_art__full img {
+            box-shadow: 0.1rem 0rem 3rem 0rem var(--primary-color), .5rem .5rem 0rem 0rem var(--secondary-color);
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 50em) {
+
+    main {
+            flex-direction: row;
+        }
+    .playlist{
+        width: 40rem;
+    }
+    .songs{
+        gap: 2rem;
+    }
+    .track__details {
+        padding-left: .50rem;
+    }
+
+}
+
+@media only screen and (min-width: 85em) {
+
+    main {
+            flex-direction: row;
+        }
+  .album_art__full img {
+      box-shadow: 0.1rem 0rem 3rem 0rem var(--primary-color), 1rem 1rem 0rem 0rem var(--shadow-color);
+  }
+
+  .playlist {
+      width: 50rem;
+      margin-right: 1rem;
+  }
+
+  .container{
+    width: min(45em, 100%);
+    margin: 2rem;
+  }
+  .songs{
+    gap: 15rem;
+  }
+
+}

@@ -1,0 +1,174 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    line-height: 1.5;
+    font-family: 'Nunito',
+        sans-serif, Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration-skip-ink: auto;
+    color: #36BF7F;
+}
+
+a:hover,
+a:focus {
+    color: #D96666;
+}
+
+/* Make images easier to work with */
+img,
+picture svg {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
+
+svg {
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.container {
+    width: min(100em, 100%);
+    margin: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+body{
+    background-color: hsla(249, 66%, 95%, 0.82);
+    font-family: 'Arsenal', sans-serif;
+}
+
+
+h1{
+    text-transform: uppercase;
+    background-color: hsla(249, 66%, 75%, 0.82);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+h2{
+    padding: 1rem;
+    background-color: hsla(249, 66%, 83%, 0.82);
+    margin: 2rem;
+    border-radius:1rem ;
+    -webkit-border-radius:1rem ;
+    -moz-border-radius:1rem ;
+    -ms-border-radius:1rem ;
+    -o-border-radius:1rem ;
+}
+
+h2 + p {
+    padding: .75rem;
+    background-color: rgba(203, 195, 243, 0.162);
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+    margin: .75rem;
+}
+
+span {
+    background-color: hsla(250, 66%, 78%, 0.088);
+}
+
+span:hover{
+    cursor: pointer;
+    background-color: hsla(250, 66%, 78%, 0.429);
+}
+li{
+    list-style:circle;
+    padding: .74rem;
+}
+
+form{
+    margin-left: 4rem;
+    padding: .5rem;
+}
+
+p{
+    margin-left: 1.5rem;
+}
+input{
+    width: 25rem;
+    border-radius: .75rem;
+    border-color: white;
+    padding: .50rem;
+}
+button:hover{
+    background-color: hsla(250, 66%, 78%, 0.726);
+}
+pre{
+    margin-left: 2rem;
+}

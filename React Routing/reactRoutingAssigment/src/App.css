@@ -1,0 +1,14 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  --primary-text:#ffff;
+  --secondary-color:#865DFF;
+  --background-color1:#9b94cf33;
+  --background-color2:#514a84f9;
+  --background-color-list:#351F39;
+}

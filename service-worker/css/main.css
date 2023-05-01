@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 20px;
+  font-family: 'Arsenal', sans-serif;
+  background-image: linear-gradient(to top, #fed6e3 0%, #d8e4ea 100%);
+}
+header {
+  min-height: 12rem;
+  padding: 1rem 3rem;
+  background-color: #ddd;
+  background-image: url('../img/patternpad.png');
+}
+header h1 {
+  font-family: sans-serif;
+  color: #436193;
+  text-shadow: 1px 1px 2px #fff;
+  font-size: 3rem;
+  font-weight: 500;
+}
+h1 .offline {
+  color: blueviolet;
+}
+main {
+  font-weight: 100;
+  padding: 1rem 3rem;
+}
+main > * {
+  clear: both;
+}
+main p {
+  margin-block: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+main ol li {
+  list-style-position: inside;
+  line-height: 1.7;
+  display: flex;
+  justify-content: space-between;
+  width: clamp(25ch, 50vw, 700px);
+}
+main ol {
+    margin-block: 1rem;
+    background-color: #92a9b527;
+    border-radius: 4rem;
+    padding: 4rem;
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    -ms-border-radius: 4rem;
+    -o-border-radius: 4rem;
+}
+p img {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  min-width: 200px;
+  width: clamp(200px, 50%, 500px);
+}
+main :is(h2, h3) {
+  padding-block: 1rem;
+  font-weight: 300;
+  border-top: 1px solid #ddd;
+  color:rgb(3, 100, 152);
+}
+main :first-child {
+  border: none;
+}
+img{
+      border-radius: 46px;
+      background: #74a7fe;
+      box-shadow: -7px -7px 14px #436193,      7px 7px 14px white;
+      animation: flip-vertical 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes flip-vertical {
+  0% {
+  transform: rotateY(180deg);
+}
+
+  100% {
+  transform: rotateY(0deg);
+}
+}
