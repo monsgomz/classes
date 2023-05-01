@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2 Cascade</title>
+    <script src="./js/main.js" defer type="module"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+    <main>
+    <form action="#">
+        <div>
+        <label for="desserts">Desserts:</label>
+        <input type="text" id="categoriesD" name="categoriesD" list="categories" placeholder="Select Something first">
+      </div>
+      <div>
+        <label for="desserts">Options:</label>
+        <input type="text" id="optionD" name="optionD" list="options" placeholder="Select Something">
+      </div>
+    </form>
+        <datalist id="categories">
+        </datalist>
+        <datalist id="options">
+        </datalist>
+    
+</main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body{
+    background-color: aliceblue;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+div{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    background-color:aliceblue;
+    justify-content: center;
+}
+
+input{
+    padding: .5rem;
+    border-radius: 2rem;
+    border-color:lightslategray;
+    border: .05rem solid;
+    text-align: center;
+    font-size:medium;
+    width: 15rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+input:hover{
+    background-color: beige;
+}
+
+
