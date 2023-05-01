@@ -1,0 +1,39 @@
+header{
+    background-color: beige;
+    color: darkolivegreen;
+}
+.card{
+    border: .125rem solid #ccc;
+  padding: 2rem;
+  margin-left: 10rem;
+  border-radius: .5rem;
+  width: min(80rem, 100%);
+  display: flex;
+  gap: 1.5rem;
+  background-color: darkolivegreen;
+}
+
+.card__img{
+    flex: 1 1;
+    width: 50%;
+    align-items: flex-start;
+    border-left: .30rem #ccc solid;
+    border-radius: 15rem;
+    -webkit-border-radius: 15rem;
+    -moz-border-radius: 15rem;
+    -ms-border-radius: 15rem;
+    -o-border-radius: 15rem;
+}
+
+.card__content {
+    display: flex;
+    flex: 1 2;
+    color: beige;
+    align-items: center;
+  }
+
+  .card__title {
+    color: beige;
+    font-size: x-large;
+    /* align-items:inherit; */
+  }
