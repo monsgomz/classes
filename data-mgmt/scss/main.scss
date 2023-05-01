@@ -1,0 +1,12 @@
+//Para no editar por accidente los otros
+@import 'bootstrap-costum-variables';
+@import 'bootstrap/bootstrap';
+@import 'bootstrap-color-classes';
+
+.ratio img{
+    object-fit: cover;
+}
+
+#error-text{
+    color: red;
+}

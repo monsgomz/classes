@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./css/main.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap" rel="stylesheet">
+      <script src="./js/main.js" type="module" defer></script>
+      <title>tmdb-jamstack</title>
+      <meta http-equiv="Content-Security-Policy"
+         content="default-src https: ;
+         img-src 'self' image.tmdb.org;
+         script-src 'self';
+         style-src 'self' fonts.gstatic.com fonts.googleapis.com;
+         font-src 'self' fonts.gstatic.com fonts.googleapis.com;
+         media-src ;
+         connect-src 'self' api.themoviedb.org ;">
+   </head>
+   <body id="page-general">
+      <main>
+         <header class="navbar">
+            <div class="container" id="header-background">
+               <h1>Movie / TV shows DB</h1>
+               <h2 id="type"> </h2>
+            </div>
+         </header>
+         <div class="loader">
+            <p>Searching ... 🍿 </p>
+         </div>
+         <div class="container">
+            <p id="error"> </p>
+         </div>
+         <div class="container flex">
+         <section class="contact-form column-sticky">
+            <div class="container">
+               <div class="contact-form__wrap">
+                  <form action="#" class="contact-form__form">
+                     <div class="form-unit full">
+                        <h2 class="contact-form__title">Search Here</h2>
+                     </div>
+                     <div class="form-unit">
+                        <label for="categories">Categories</label>
+                        <select id="categories" name="categories">
+                           <option value="clear">Select</option>
+                           <option value="movie">Movies</option>
+                           <option value="tv">Tv Shows</option>
+                        </select>
+                     </div>
+                     <label for="term">Term</label>
+                     <input type="text" placeholder="Type something..." aria-label="Search movie" id="word">
+                     <button id="btn-search">Search</button>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <div class="container">
+            <section class="container">
+               <ul class="card--group"  id="cards">
+               </ul>
+            </section>
+         </div>
+      </main>
+   </body>
+</html>
