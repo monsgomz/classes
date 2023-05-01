@@ -1,0 +1,21 @@
+{
+  "name": "pokemonMidleware",
+  "version": "1.0.0",
+  "description": "project middleware",
+  "main": "src/index.js",
+  "author": "M Montserrat G",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  }
+}
